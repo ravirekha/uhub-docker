@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "ravikumar@oncam.com"
+    registry = "uhub.service.ucloud.cn"
     registryCredential = 'uhub'
     dockerImage = 'uhub.service.ucloud.cn/ws_Slave_image/                               '
   }
