@@ -1,8 +1,8 @@
 pipeline {
   environment {
-    registry = "ravirekha1"
-    registryCredential = 'dockerhub'
-    dockerImage = ''
+    registry = "ravikumar@oncam.com"
+    registryCredential = 'uhub'
+    dockerImage = 'uhub.service.ucloud.cn/ws_Slave_image/                               '
   }
   agent any
   stages {
@@ -14,7 +14,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build registry + ":latest"
         }
       }
     }
