@@ -1,7 +1,7 @@
 pipeline {
   environment {
-    registry = "slave-image"
-    registryCredential = 'ucloud'
+    registry = "uhub.service.ucloud.cn/ws_kubernetes_mirror/jenkins-ws-slave"
+    registryCredential = 'uhub'
     dockerImage = ''
   }
   agent any
