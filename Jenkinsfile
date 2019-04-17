@@ -1,8 +1,8 @@
 pipeline {
   environment {
-    registry = "uhub.service.ucloud.cn"
+    registry = "ravikumar@oncam.com"
     registryCredential = 'uhub'
-    dockerImage = 'uhub.service.ucloud.cn/ws_Slave_image/                               '
+    dockerImage = ''
   }
   agent any
   stages {
