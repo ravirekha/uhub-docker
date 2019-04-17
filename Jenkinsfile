@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "slave-image"
-    registryCredential = 'uhub'
+    registryCredential = 'ucloud'
     dockerImage = ''
   }
   agent any
