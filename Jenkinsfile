@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "ravikumar@oncam.com"
+    registry = "slave-image"
     registryCredential = 'uhub'
     dockerImage = ''
   }
