@@ -24,8 +24,7 @@ pipeline {
       steps{
         script {
           
-            sh 
-            '''
+            sh '''
                    sudo docker login -u ravikumar@oncam.com -p RAvi@398 uhub.service.ucloud.cn
                    sudo docker push uhub.service.ucloud.cn/ws_kubernets_mirror/ws-jenkins-slave1:latest
             '''
