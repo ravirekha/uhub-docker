@@ -23,7 +23,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( 'docker login uhub.service.ucloud.cn','uhub') {
+          docker.withRegistry( 'https://passport.ucloud.cn/?service=https://console.ucloud.cn/#login','uhub') {
             dockerImage.push()
           }
         }
