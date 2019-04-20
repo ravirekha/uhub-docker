@@ -4,7 +4,7 @@ pipeline {
     registryCredential = 'uhub'
     dockerImage = ''
   }
-  agent any{
+  agent {
   label 'ravi'
   }
   stages {
