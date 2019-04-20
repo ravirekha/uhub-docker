@@ -23,8 +23,10 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-         docker.withRegistry( 'https://console.ucloud.cn','uhub') {
-            dockerImage.push()
+         docker.withRegistry( 'https://console.ucloud.cn','uhub') {         
+           sh '''
+            docker push uhub.service.ucloud.cn/ws_kubernets_mirror/ws-jenkins-slave1:latest
+            '''
          }
         }
       }
