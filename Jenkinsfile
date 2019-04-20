@@ -4,7 +4,9 @@ pipeline {
     registryCredential = 'uhub'
     dockerImage = ''
   }
-  agent any
+  agent any{
+  label 'ravi'
+  }
   stages {
     stage('Cloning Git') {
       steps {
