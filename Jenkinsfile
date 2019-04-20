@@ -23,7 +23,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '','uhub') {
+          docker.withRegistry( 'uhub.service.ucloud.cn','uhub') {
             dockerImage.push()
           }
         }
