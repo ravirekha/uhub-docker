@@ -1,7 +1,7 @@
 pipeline {
   environment {
-    registry = "vijaylokesh/myfirst"
-    registryCredential = 'docker'
+    registry = "uhub.service.ucloud.cn/ws_kubernets_mirror"
+    registryCredential = 'uhub'
     dockerImage = ''
   }
   agent any
@@ -21,7 +21,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '','docker') {
+          docker.withRegistry( '','uhub') {
             dockerImage.push()
           }
         }
