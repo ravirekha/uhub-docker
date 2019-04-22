@@ -5,7 +5,7 @@ pipeline {
     dockerImage = ''
   }
   agent {
-  label 'ravi'
+  label 'docker_slave1'
   }
   stages {
     stage('Cloning Git') {
