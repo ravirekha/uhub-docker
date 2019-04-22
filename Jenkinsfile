@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "uhub.service.ucloud.cn/ws_kubernets_mirror/ws-jenkins-slave"
+    registry = "uhub.service.ucloud.cn/ws_kubernetes_mirror/ws-jenkins-slave"
     registryCredential = 'uhub'
     dockerImage = ''
   }
@@ -19,7 +19,7 @@ pipeline {
         script {
          docker.withRegistry( 'https://uhub.service.ucloud.cn','uhub') {         
            sh '''
-            docker push uhub.service.ucloud.cn/ws_kubernets_mirror/ws-jenkins-slave:latest
+            docker push uhub.service.ucloud.cn/ws_kubernetes_mirror/ws-jenkins-slave:latest
             '''
          }
         }
