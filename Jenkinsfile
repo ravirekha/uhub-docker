@@ -7,16 +7,10 @@ pipeline {
   agent {
   label 'docker_slave1'
   }
-  stages {
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/ravirekha/pipeline-project.git'
-      }
-    }
-    stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build registry + ":latest"
+   stage('Building image') {
+     steps{
+       script {
+        dockerImage = docker.build registry + ":latest"
         }
       }
     }
