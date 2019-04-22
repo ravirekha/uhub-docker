@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/ravirekha/'
+        git 'https://github.com/ravirekha/uhub-docker.git'
       }
     }
     stage('Building image') {
