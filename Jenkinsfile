@@ -3,14 +3,20 @@ pipeline {
     registry = "uhub.service.ucloud.cn/ws_kubernetes_mirror/ws-jenkins-slave"
     registryCredential = 'uhub'
     dockerImage = ''
-  }
+    }
   agent {
   label 'docker_slave1'
   }
-   stage('Building image') {
-     steps{
-       script {
-        dockerImage = docker.build registry + ":latest"
+  stages {
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/ravirekha/'
+      }
+    }
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build registry + ":latest"
         }
       }
     }
